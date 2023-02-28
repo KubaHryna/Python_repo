@@ -57,16 +57,44 @@ def function3(lista):
     print(lista)
 
 function3(nazwiska)
-word1="abccba"
-word2="dgjuiafja"
-def palindrom(word):
-    for i in range(0, len(word)):
-        for j in range(len(word), 0):
-            if(word[i] != word[j]):
-                    return False
 
-            return True
+liczby = [1, 2, 3, 6, 4, 5]
+liczby2 = [1, 9, 3, 6, 2, 15]
+
+def check_if_sorted(zbior):
+    for i in range(len(zbior)-1):
+         if (zbior[i] > zbior[i + 1]):
+            return False
+         else:
+                continue
+    return True
 
 
+print(check_if_sorted(liczby))
 
-print(palindrom(word1))
+print(check_if_sorted(liczby2))
+
+liczby3 = [1, 2, 3, 4]
+
+liczby3 = [pow(x, 3) for x in liczby3]
+print(liczby3)
+
+list = []
+
+for i in range(0, 6):
+    li_rz = float(input("Podaj 6 liczb rzeczywistych: "))
+
+    list.append(li_rz)
+
+n1 = float(input("Podaj liczbe która ma być zmieniona: "))
+n2 = float(input("Podaj liczbe na jaką chcesz zmienić: "))
+
+def func(list, n1, n2):
+    for x in range(len(list)):
+        if list[x] == n1:
+            list[x]=n2
+
+    return list
+
+
+print(func(list, n1, n2))
