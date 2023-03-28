@@ -1,0 +1,14 @@
+phonenumbers = {
+    1: {"Imie Nazwisko": "Jan Kowalski", "Phone Number": 505212452},
+    2: {"Imie Nazwisko": "Adam Hamkar", "Phone Number": 505212687},
+    3: {"Imie Nazwisko": "Edyta Trąbka", "Phone Number": 662421765},
+    4: {"Imie Nazwisko": "Antonio Banderas", "Phone Number": 997999112}
+}
+
+
+def wypisz(słownik):
+    for i in słownik:
+        print(słownik[i])
+        print("\n")
+
+wypisz(phonenumbers)
