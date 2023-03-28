@@ -1,0 +1,19 @@
+krotka = (1.45, 2, "Polska", "Cześć to ja", 125365623, -245,"abc",1.45, 2, "Polska", "Cześć to ja", 125365623, -245,"abc",2,2,2,241,"Polska")
+print(krotka[3])
+print(krotka[3:6])
+print(krotka[-3])
+
+def dodawanie_wartosci(krotka, element):
+    krotka = krotka + (element,)
+    return krotka
+
+
+print(dodawanie_wartosci(krotka, 25))
+
+
+def bez_powtorzen(krotka):
+    krotka2= tuple(set(krotka))
+    return krotka2
+print(bez_powtorzen(krotka))
+
+
