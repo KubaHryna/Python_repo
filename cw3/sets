@@ -1,0 +1,14 @@
+A = {"Polska", "Niemcy", "Czechy", "Ukraina", "Serbia","Hiszpania", "Portugalia","Słowacja","Francja"}
+A.add("Grecja")
+print("Polska" in A)
+A.remove("Grecja")
+B = {"Francja", "Hiszpania", "Portugalia","Polska","Słowacja","Ukraina"}
+C = {"Rosja","Chiny","Japonia","Francja","Ukraina"}
+
+print(A.intersection(B) | A.intersection(C) | B.intersection(C))
+
+print(A & B & C) #To co jest we wszystkich zbiorach
+
+print(A.difference(B)) #Różnica zbirów
+print(B.issubset(A)) #Czy jest podzbiorem
+
