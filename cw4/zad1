@@ -1,0 +1,21 @@
+names = ["michal", "nela", "ola", "przemek"]
+names2=[name.capitalize() for name in names]
+
+print(names2)
+
+names3=[x for x in names if "l" in x]
+
+print(names3)
+
+names4=[x for x in names2 if x.endswith("a")]
+names5=tuple(names4)
+
+
+
+print(names5)
+suma=0
+for x in names:
+    suma += len(x)
+
+
+print(suma)
