@@ -1,0 +1,51 @@
+import math
+def funkcja_iloczyn(*arg):
+    iloczyn = 1
+    for x in arg:
+        iloczyn *= x
+    print(iloczyn)
+
+def n_potega(n,*args):
+    suma=0
+    for x in args:
+        suma = suma + x**n
+    print(suma)
+
+
+def mean(*args):
+    suma=0
+    for x in args:
+        suma += x
+    print(suma/len(args))
+
+def gmean(*args):
+    iloczyn=1
+    for x in args:
+        iloczyn = iloczyn*x
+    print(math.pow(iloczyn,1/len(args)))
+
+
+def zlicz(*args):
+    licz = 0
+    for i in args:
+        licz += len(i)
+    print(licz)
+
+def function(**kwargs):
+    for key,value in kwargs.items():
+        print("Imie nazwisko:"+key," ma numer: "+value)
+
+
+def function2(**kwargs):
+    
+
+
+
+
+function(Robert_Maklowicz = '4251564757', Adas_Lota = '41252525')
+funkcja_iloczyn(3,2,4)
+n_potega(2,4,5,2)
+mean(2,4)
+gmean(2, 2, 5, 7)
+zlicz("Jajo", "bajo", "rafonix")
+
