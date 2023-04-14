@@ -1,0 +1,32 @@
+class Fruit:
+    def __init__(self, name, color, weight):
+        self.name=name
+        self.color=color
+        self.weight=weight
+    def isfresh(self):
+        if self.color=="brown":
+            return False
+        else: return True
+    def __str__(self):
+        return ("Fruit:"+str(self.name)+"\ncolor:" +str(self.color)+"\nweight: "+str(self.weight)+"\nIt is fresh: "+str(self.isfresh())+"\n")
+
+class Banana(Fruit):
+    def __init__(self):
+        super().__init__("banana", "yellow","100g")
+
+class Apple(Fruit):
+    def __init__(self):
+        super().__init__("apple", "red","50g")
+
+class Orange(Fruit):
+    def __init__(self):
+        super().__init__("orange", "orange","90g")
+
+
+
+fruit1=Banana()
+fruit2=Apple()
+fruit3=Orange()
+print(fruit1)
+print(fruit2)
+print(fruit3)
