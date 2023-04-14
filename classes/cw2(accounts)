@@ -1,0 +1,55 @@
+class Account:
+    def __init__(self, imie):
+        self.saldo=0
+        self.imie=imie
+
+    def Wplata(self, kwota):
+        self.saldo+=kwota
+        print( f"Wpłacono {kwota} na konto {self.imie}")
+
+    def Wyplata(self,kwota):
+        if(kwota>self.saldo):
+            print("Nie można wypłacić podanej kwoty, brak wystarczających środków na koncie")
+        else:
+            self.saldo=self.saldo-kwota
+            print(f"Wypłacono: {kwota} zł z konta {self.imie}\nTwoje aktualne saldo wynosi: {self.saldo}")
+
+    def Przelew(self,kwota,osoba):
+        if(kwota>self.saldo):
+            print("Nie można przelać podanej kwoty, brak wystarczających środków na koncie")
+        else:
+            self.saldo=self.saldo-kwota
+            osoba.saldo+=kwota
+            print(f"Przelano {kwota} zł na konto {osoba.imie} z konta {self.imie}")
+
+    def check_saldo(self):
+        print(f"Masz {self.saldo}zł na koncie")
+
+class PrivateAccount(Account):
+    def __init__(self,imie,nazwisko):
+        super().__init__(imie)
+        self.nazwisko=nazwisko
+
+
+
+
+
+
+
+
+
+
+
+
+osoba1=Account("Kuba")
+osoba2=Account("Wiktor")
+osoba3=Account("Koper")
+osoba4=PrivateAccount("Jan","Kowalski")
+osoba1.Wplata(50)
+osoba2.Wplata(100)
+osoba1.Wyplata(45)
+osoba1.Przelew(2,osoba2)
+osoba1.check_saldo()
+osoba2.check_saldo()
+osoba2.Przelew(102,osoba3)
+osoba3.Przelew(2,osoba4)
