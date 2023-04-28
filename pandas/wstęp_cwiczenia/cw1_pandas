@@ -1,0 +1,49 @@
+import pandas as pd
+import numpy as np
+
+a = pd.Series([-1, 1, 3, 5, 7])
+b = pd.Series([3, -2, 4, 5, 9])
+print(a.describe())
+print(a)
+x = {'Imię': ['Marek', 'Paweł', 'Jan', 'Marcin'], 'Wiek': [15, 24, 56, 32]}
+y = pd.DataFrame(x)
+
+print(y)
+
+z = list(a)
+print(z)
+
+tablica = np.array([1, 2, 3, 4, 5, 6])
+print(tablica)
+tablica2 = pd.Series(tablica)
+print(tablica2)
+
+tablica3 = np.array(tablica2)
+print(tablica3)
+
+print(a*b)
+print(a+b)
+print(a-b)
+print(a/b)
+
+seria = pd.Series(np.random.uniform(-10, 10, size=10))
+print(seria)
+seria2 = pd.Series([i for i in seria if i<0])
+print(seria2)
+
+df = pd.DataFrame([[1, 2, 4, 5],
+                  [-3, 8, 0.5, 10],
+                  [2, -5, 7, 3]],
+                  index=['l1', 'l2', 'l3'],
+                  columns=['a', 'b', 'c', 'd'])
+print(df.sort_values('a'))
+print(df.head(2))
+print(df.sort_index())
+print(df.iloc[2:3])
+
+
+my_list = [1, 32, -37, 91, 12, 11, -5]
+my_dict = {'a' : [1, 3, 2], 'b' : [2, 5, 7], 'c' : [3, 4, 8], 'd'
+: [4, 10, 12]}
+my_array = np.array([[1, 2, 5],[-2, 3, 3], [5, 2, 6]])
+my_series = pd.Series([1, 32, -37, 91, 12, 11, -5], index=['a', 'b', 'c', 'd', 'e', 'f', 'g'])
